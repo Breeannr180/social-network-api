@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { Schema, Types } = mongoose; // Importing the mongoose object and Types from mongoose
+// const mongoose = require('mongoose');
+const { Schema, Types, model } = require('mongoose'); // Importing the mongoose object and Types from mongoose
 const moment = require('moment');
 
 const reactionSchema = new Schema(
@@ -33,11 +33,12 @@ const reactionSchema = new Schema(
     toJSON: {
       getters: true,
     },
+    id: false,
   }
 );
 
 
-const thoughtSchema = new mongoose.Schema({
+const thoughtSchema = new Schema({
   thoughtText: {
     type: String,
     required: true,
@@ -61,6 +62,6 @@ thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });
 
-const thought = mongoose.model('thought', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
-module.exports = thought;
+module.exports = Thought;
