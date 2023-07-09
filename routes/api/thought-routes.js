@@ -10,10 +10,10 @@ const {
   removeReaction,
 } = require("../../controllers/thought-controller");
 
-// Set up GET all and POST at /api/thoughts
+// Set up GET all and POST at 3001/api/thoughts
 router.route("/").get(getThoughts).post(createThought);
 
-// Set up GET one, PUT, and DELETE at /api/thoughts/:id
+// Set up GET one, PUT, and DELETE at /api/thoughts/:thoughtId
 router
   .route("/:thoughtId")
   .get(getSingleThought)
