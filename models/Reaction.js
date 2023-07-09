@@ -1,5 +1,5 @@
-const { Schema, Types, model } = require('mongoose'); // Importing the mongoose object and Types from mongoose
-const moment = require('moment');
+const { Schema, Types, model } = require('mongoose'); //importing the Schema and model from mongoose
+const moment = require('moment');//importing moment
 
 const reactionSchema = new Schema(
     {

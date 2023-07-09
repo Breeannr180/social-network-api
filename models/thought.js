@@ -1,6 +1,6 @@
-// const mongoose = require('mongoose');
-const { Schema, Types, model } = require('mongoose'); // Importing the mongoose object and Types from mongoose
-const reactionSchema = require("./Reaction");
+//Requires mongoose
+const { Schema, Types, model } = require('mongoose'); //importing the Schema and model from mongoose
+const reactionSchema = require("./Reaction");//importing the reactionSchema from the Reaction.js file
 const moment = require('moment');
 
 const thoughtSchema = new Schema({
